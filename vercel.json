@@ -1,0 +1,14 @@
+{
+  "functions": {
+    "api/cv-chat.ts": {
+      "maxDuration": 30,
+      "includeFiles": "src/app/content/cv/**"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/((?!api/|src/|@|node_modules/|assets/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
