@@ -15,7 +15,7 @@ export const interactiveCvHero = {
 export const interactiveCvChat = {
   heading: "Ask Me Anything",
   subheading:
-    'Try questions like: "What\'s your experience with AI products?" or "Tell me about your biggest product success"',
+    'Try questions like: "What products have you worked on?" or "Tell me about your biggest product success"',
   inputPlaceholder:
     "Ask about experience, projects, skills, or philosophy...",
   footerNote:
