@@ -1,10 +1,15 @@
 import aboutPhoto from "figma:asset/a8ea7b4a50c5c5f9c62226562f8edcfaad72b66d.png";
+import heroImage from "figma:asset/bce6ab1d96cd627878353e036105c228f43e44f9.png";
+import aiCvProjectCover from "../../assets/work/AI_cv_project.png";
+import subscriptionModelCover from "../../assets/work/Subscription_model_project.png";
 import { motion } from "motion/react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { Target, TrendingUp, Users, Zap, Award, Rocket, ExternalLink, Lightbulb } from "lucide-react";
+import { Award, Rocket } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Link } from "react-router";
+import { WORK_PROJECTS } from "../data/workProjects";
+import { ProjectCard } from "../components/work/ProjectCard";
 
 export function Work() {
   const fadeInUp = {
@@ -20,28 +25,10 @@ export function Work() {
     viewport: { once: true },
   };
 
-  const features = [
-    {
-      icon: <Target size={32} />,
-      title: "Product Strategy",
-      description: "Defining vision and roadmaps that align business goals with user needs and market opportunities.",
-    },
-    {
-      icon: <TrendingUp size={32} />,
-      title: "Go-to-Market Excellence",
-      description: "Orchestrating successful product launches with cross-functional teams and measurable impact.",
-    },
-    {
-      icon: <Users size={32} />,
-      title: "Data-Driven Decision Making",
-      description: "Leveraging analytics and user insights to validate hypotheses and optimize product experiences.",
-    },
-    {
-      icon: <Zap size={32} />,
-      title: "AI Product Development",
-      description: "Building intelligent features that enhance user value while maintaining ethical considerations.",
-    },
-  ];
+  const projectCoverImages: Record<string, string> = {
+    "interactive-cv": aiCvProjectCover,
+    "subscription-model": subscriptionModelCover,
+  };
 
   const stats = [
     { value: "32M", label: "Peak DAU" },
@@ -68,57 +55,6 @@ export function Work() {
       author: "Adnaan Ebrahim",
       role: "Director of New Games / Strategy",
       context: "Worked with Heather across multiple organisations",
-    },
-  ];
-
-  const caseStudies = [
-    {
-      title: "AI-Powered Marketplace Recommendations",
-      summary: "Transformed conversion rates by 40% through ML-driven personalization engine for a two-sided marketplace platform.",
-      problem: "Low engagement and conversion in product discovery",
-      approach: "Built collaborative filtering system with real-time user behavior analysis",
-      result: "40% increase in conversion, 3x improvement in user engagement",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
-    },
-    {
-      title: "Data Analytics Dashboard Redesign",
-      summary: "Reimagined enterprise analytics platform serving 100K+ daily users, reducing time-to-insight by 60%.",
-      problem: "Complex interface hindering decision-making speed",
-      approach: "User research, progressive disclosure, AI-powered insights",
-      result: "60% faster insights, 90% user satisfaction score",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
-    },
-    {
-      title: "Mobile-First Consumer App Launch",
-      summary: "Led 0-to-1 product development for consumer social app, achieving 1M users in first 6 months.",
-      problem: "Saturated market, need for differentiation",
-      approach: "Rapid prototyping, continuous user testing, viral growth mechanics",
-      result: "1M users in 6 months, 4.8 App Store rating",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800",
-    },
-  ];
-
-  const experiments = [
-    {
-      title: "Generative UI Prototype",
-      summary: "Experimental AI tool that generates custom UI components from natural language descriptions.",
-      focus: "AI/ML, Design Systems, Developer Tools",
-      technology: "GPT-4, React, TypeScript",
-      impact: "Internal tool adopted by 50+ designers and developers",
-    },
-    {
-      title: "Real-Time Collaboration Framework",
-      summary: "Open-source framework for building multiplayer web experiences with conflict-free replication.",
-      focus: "Real-time Systems, Open Source",
-      technology: "WebRTC, CRDTs, Node.js",
-      impact: "500+ GitHub stars, featured in weekly newsletters",
-    },
-    {
-      title: "Voice-Controlled Dashboard",
-      summary: "Accessibility-first experiment enabling hands-free data exploration for analytics dashboards.",
-      focus: "Accessibility, Voice UI, Analytics",
-      technology: "Web Speech API, React, D3.js",
-      impact: "Demo at accessibility conference, positive user feedback",
     },
   ];
 
@@ -347,16 +283,36 @@ export function Work() {
       </section>
 
 
-      {/* Experiments Section */}
+      {/* Case studies & projects */}
       <section className="py-24 bg-neutral-50">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div {...fadeInUp}>
-            <Lightbulb size={48} className="mx-auto mb-6 text-neutral-400" />
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Case Studies & Projects</h2>
-            <p className="text-xl text-neutral-600">
-              Coming soon: Detailed case studies and project deep-dives showcasing product challenges, solutions, and measurable impact.
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div {...fadeInUp} className="mb-14 max-w-3xl">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Case Studies &amp; Projects
+            </h2>
+            <p className="text-lg text-neutral-600 leading-relaxed">
+              Deep dives into how work shipped — constraints, trade-offs, and outcomes.
+              This grid will grow to several case studies; each tile links to a dedicated
+              page you can share directly.
             </p>
           </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10">
+            {WORK_PROJECTS.map((project, index) => (
+              <ProjectCard
+                key={project.slug}
+                slug={project.slug}
+                title={project.title}
+                eyebrow={project.eyebrow}
+                summary={project.summary}
+                coverImageSrc={
+                  projectCoverImages[project.slug] ?? heroImage
+                }
+                coverAlt={project.title}
+                index={index}
+              />
+            ))}
+          </div>
         </div>
       </section>
 

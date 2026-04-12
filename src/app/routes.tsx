@@ -6,6 +6,7 @@ import { InteractiveCV } from "./pages/InteractiveCV";
 import { CV } from "./pages/CV";
 import { Personal } from "./pages/Personal";
 import { NotFound } from "./pages/NotFound";
+import { WorkProjectDetail } from "./pages/WorkProjectDetail";
 
 export const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, Component: Home },
       { path: "work", Component: Work },
+      { path: "work/projects/:projectSlug", Component: WorkProjectDetail },
       { path: "interactive-cv", Component: InteractiveCV },
       { path: "projects", element: <Navigate to="/work" replace /> },
       { path: "cv", Component: CV },

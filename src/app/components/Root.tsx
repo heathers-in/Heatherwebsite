@@ -1,11 +1,19 @@
 import { useEffect, useLayoutEffect } from "react";
 import { Outlet, useLocation } from "react-router";
+import { getWorkProjectDocumentTitle } from "../data/workProjects";
 
 const SITE_TITLE = "Heather Sinclair";
 
 function documentTitleForPath(pathname: string): string {
   const path = pathname.replace(/\/+$/, "") || "/";
   if (path === "/") return SITE_TITLE;
+
+  const projectMatch = path.match(/^\/work\/projects\/([^/]+)$/);
+  if (projectMatch) {
+    const title = getWorkProjectDocumentTitle(projectMatch[1]);
+    if (title) return `${SITE_TITLE} - ${title}`;
+  }
+
   const segment = path.slice(1).split("/")[0];
   switch (segment) {
     case "work":
