@@ -4,7 +4,7 @@ A selection of products I’ve worked on across games, fintech, and marketplaces
 
 ---
 
-## 🎮 :contentReference[oaicite:0]{index=0} (Zynga)
+## 🎮 FarmVille (Zynga)
 
 **Overview**  
 One of the most successful social games of all time, played on Facebook and mobile, centred around farming simulation and social gameplay loops.
@@ -19,9 +19,12 @@ One of the most successful social games of all time, played on Facebook and mobi
 - Experimentation at scale (events, offers, retention loops)  
 - Balancing game economy and player progression  
 
+**Platform**  
+- Social Web (Facebook)
+
 ---
 
-## 🎢 :contentReference[oaicite:1]{index=1} (Zynga)
+## 🎢 CoasterVille (Zynga)
 
 **Overview**  
 Theme park simulation game focused on creative building and social progression.
@@ -35,9 +38,12 @@ Theme park simulation game focused on creative building and social progression.
 - Social mechanics and engagement loops  
 - Content iteration and feature optimisation  
 
+**Platform**  
+- Social Web (Facebook)
+
 ---
 
-## 🏰 :contentReference[oaicite:2]{index=2} (Zynga)
+## 🏰 CastleVille (Zynga)
 
 **Overview**  
 Fantasy kingdom-building game combining narrative, crafting, and social play.
@@ -51,9 +57,12 @@ Fantasy kingdom-building game combining narrative, crafting, and social play.
 - Crafting and resource systems  
 - Retention and early-game experience  
 
+**Platform**  
+- Social Web (Facebook)
+
 ---
 
-## 🧙 :contentReference[oaicite:3]{index=3} (Standing Stone Games / Turbine)
+## 🧙 The Lord of the Rings Online (Standing Stone Games / Turbine)
 
 **Overview**  
 Massively multiplayer online role-playing game set in Tolkien’s Middle-earth.
@@ -67,9 +76,12 @@ Massively multiplayer online role-playing game set in Tolkien’s Middle-earth.
 - Subscription and free-to-play hybrid monetisation  
 - Player progression and world expansion systems  
 
+**Platform**  
+- PC
+
 ---
 
-## 🐉 :contentReference[oaicite:4]{index=4} (Standing Stone Games / Turbine)
+## 🐉 Dungeons & Dragons Online (Standing Stone Games / Turbine)
 
 **Overview**  
 Action-oriented MMORPG based on the Dungeons & Dragons universe.
@@ -83,9 +95,12 @@ Action-oriented MMORPG based on the Dungeons & Dragons universe.
 - Dungeon-based gameplay systems  
 - Player retention and engagement loops  
 
+**Platform**  
+- PC
+
 ---
 
-## 🍓 :contentReference[oaicite:5]{index=5} (King)
+## 🍓 Farm Heroes Saga (King)
 
 **Overview**  
 Match-3 puzzle game within King’s portfolio, part of the broader Candy Crush ecosystem.
@@ -98,6 +113,9 @@ Match-3 puzzle game within King’s portfolio, part of the broader Candy Crush e
 - Live ops optimisation and experimentation  
 - Feature prioritisation and roadmap reset  
 - Team performance and delivery stabilisation  
+
+**Platform**  
+- Mobile (Android and iOS)
 
 ---
 
@@ -114,7 +132,10 @@ Fintech platform providing trade finance and working capital solutions for globa
 - Risk and compliance automation  
 - Decisioning systems and workflows  
 - Building product function from scratch  
-- Cross-functional alignment (risk, ops, sales, engineering)  
+- Cross-functional alignment (risk, ops, sales, engineering)
+
+**Platform**  
+- Web
 
 ---
 
@@ -126,7 +147,7 @@ Early-stage livestream shopping marketplace focused on fashion and collectibles.
 **Scale & Metrics**  
 - ~300k MAU (early-stage context)  
 - Operating across UK + multiple EU markets  
-- £4m monthly GMV (early-stage context) 
+- £4m monthly GMV (early-stage context)
 
 **Product Focus**  
 - Marketplace growth and liquidity  
@@ -134,5 +155,7 @@ Early-stage livestream shopping marketplace focused on fashion and collectibles.
 - Seller and buyer onboarding systems  
 - Early-stage experimentation and product-market fit  
 
----
+**Platform**  
+- Mobile (Android and iOS)
 
+---
