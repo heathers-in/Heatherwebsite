@@ -1,6 +1,6 @@
 import logoImage from "figma:asset/185e4b7030a08df10cbfb5700ac721d5ed96225f.png";
 import { Link } from "react-router";
-import { Linkedin, Mail, Instagram } from "lucide-react";
+import { Linkedin, Mail, Instagram, Github } from "lucide-react";
 
 export function Footer() {
   return (
@@ -56,6 +56,15 @@ export function Footer() {
                 aria-label="Instagram"
               >
                 <Instagram size={24} />
+              </a>
+              <a
+                href="https://github.com/heathers-in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-neutral-400 hover:text-neutral-100 transition-colors"
+                aria-label="GitHub"
+              >
+                <Github size={24} />
               </a>
               <a
                 href="mailto:hsinclair@fastmail.com"
